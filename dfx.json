@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "ii_integration_backend": {
+      "main": "src/ii_integration_backend/main.mo",
+      "type": "motoko"
+    },
+    "ii_integration_frontend": {
+      "dependencies": [
+        "ii_integration_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/ii_integration_frontend/src/index.html"
+      },
+      "source": [
+        "src/ii_integration_frontend/assets",
+        "dist/ii_integration_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
